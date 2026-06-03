@@ -90,13 +90,6 @@ Portfólio de software desktop e sistemas de gestão. Cada projeto inclui captur
 
 Projetos incluídos: Gestor Desk (ERP) e OrBullets (controle de estoque).
 
----
-
-### Crachá interativo (`/cracha`)
-
-Página especial com um crachá 3D animado (cordão e badge em Three.js). Exibe nome, cargo e um espaço para foto — pensada como peça visual ou demonstração de interatividade.
-
----
 
 ## Tecnologias
 
