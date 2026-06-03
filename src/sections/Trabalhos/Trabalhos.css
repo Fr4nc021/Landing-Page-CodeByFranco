@@ -1,0 +1,219 @@
+.trabalhos {
+  background: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trabalhos__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 48px 112px;
+  box-sizing: border-box;
+}
+
+.trabalhos__header {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 360px);
+  gap: 32px 48px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.trabalhos__header-main {
+  min-width: 0;
+}
+
+.trabalhos__label {
+  display: block;
+  margin-bottom: 20px;
+  color: #a855f7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.trabalhos__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.trabalhos__title-accent {
+  background: linear-gradient(90deg, #c084fc 0%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.trabalhos__description {
+  margin: 0;
+  color: #9ca3af;
+  font-size: clamp(0.95rem, 1.5vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.trabalhos__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.trabalhos__card {
+  min-width: 0;
+}
+
+.trabalhos__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.trabalhos__card-link:hover {
+  border-color: rgba(168, 85, 247, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-4px);
+}
+
+.trabalhos__card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.trabalhos__card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.trabalhos__card-link:hover .trabalhos__card-image {
+  transform: scale(1.03);
+}
+
+.trabalhos__card-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 22px 24px;
+}
+
+.trabalhos__card-text {
+  min-width: 0;
+}
+
+.trabalhos__card-category {
+  display: block;
+  margin-bottom: 8px;
+  color: #a855f7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.trabalhos__card-title {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.trabalhos__card-description {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.trabalhos__card-action {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.trabalhos__card-action svg {
+  width: 18px;
+  height: 18px;
+}
+
+.trabalhos__card-link:hover .trabalhos__card-action {
+  border-color: rgba(168, 85, 247, 0.35);
+  background: rgba(168, 85, 247, 0.15);
+  color: #e9d5ff;
+}
+
+@media (max-width: 1024px) {
+  .trabalhos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trabalhos__grid .trabalhos__card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .trabalhos__inner {
+    padding: 72px 20px 88px;
+  }
+
+  .trabalhos__header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  .trabalhos__description {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trabalhos__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trabalhos__grid .trabalhos__card:last-child {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+}

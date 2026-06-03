@@ -1,0 +1,249 @@
+.contato {
+  position: relative;
+  background: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contato__inner {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 48px 24px;
+  box-sizing: border-box;
+}
+
+.contato__panel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 72px 56px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  box-sizing: border-box;
+}
+
+.contato__panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse 55% 80% at 50% 0%,
+    rgba(168, 85, 247, 0.22) 0%,
+    rgba(59, 130, 246, 0.12) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.contato__hero {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.contato__label {
+  display: block;
+  margin-bottom: 16px;
+  color: #a855f7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contato__title {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.contato__title-accent {
+  background: linear-gradient(90deg, #c084fc 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contato__description {
+  margin: 0 auto 32px;
+  max-width: 480px;
+  color: #a1a1aa;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.contato__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #a855f7 0%, #3b82f6 100%);
+  color: #0a0a0a;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(168, 85, 247, 0.35);
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato__cta:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 36px rgba(168, 85, 247, 0.45);
+}
+
+.contato__cta-arrow {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.contato__channels {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.contato__channels > li {
+  min-width: 0;
+}
+
+.contato__channel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  padding: 24px 24px 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.contato__channel:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.06);
+  transform: translateY(-2px);
+}
+
+.contato__channel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #a855f7;
+}
+
+.contato__channel-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contato__channel-label {
+  color: #71717a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contato__channel-label,
+.contato__channel-value {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.contato__channel-value {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+}
+
+.contato__channel--email .contato__channel-value {
+  font-size: clamp(0.8125rem, 3.4vw, 0.9375rem);
+}
+
+@media (max-width: 1024px) {
+  .contato__channels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .contato__inner {
+    padding: 48px 16px 48px;
+  }
+
+  .contato__panel {
+    padding: 48px 20px 32px;
+    border-radius: 20px;
+  }
+
+  .contato__hero {
+    margin-bottom: 32px;
+  }
+
+  .contato__title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .contato__description {
+    margin-bottom: 28px;
+    font-size: 0.9375rem;
+  }
+
+  .contato__cta {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contato__channels {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .contato__channel {
+    align-items: stretch;
+    padding: 20px 18px;
+  }
+
+  .contato__channel:hover {
+    transform: none;
+  }
+
+  .contato__channel-value {
+    font-size: 0.9375rem;
+  }
+}

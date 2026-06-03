@@ -1,0 +1,209 @@
+.home {
+  min-height: calc(100vh - 72px);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(5, 5, 5, 0.55) 0%, rgba(5, 5, 5, 0.85) 100%),
+    url('/fundo.jpg') center / cover no-repeat;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%);
+  pointer-events: none;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 48px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px 48px;
+  min-height: calc(100vh - 72px);
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  background: rgba(10, 10, 10, 0.65);
+  color: #e5e7eb;
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.hero__badge-icon {
+  color: #a855f7;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.hero__title {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero__title-accent {
+  background: linear-gradient(90deg, #3b82f6 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__subtitle {
+  margin: 0 0 32px;
+  max-width: 480px;
+  color: #a0a0a0;
+  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: auto;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__btn:hover {
+  transform: translateY(-1px);
+}
+
+.hero__btn--primary {
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(90deg, #3b82f6 0%, #a855f7 100%);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.35);
+}
+
+.hero__btn--primary:hover {
+  opacity: 0.95;
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.4);
+}
+
+.hero__btn--secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.hero__btn--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero__credit {
+  margin: 48px 0 0;
+  color: rgba(160, 160, 160, 0.75);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.hero__credit strong {
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 40%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.45) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero__mockup {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 120px 20px 48px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center;
+  }
+
+  .hero__subtitle {
+    max-width: none;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+
+  .hero__credit {
+    margin-top: 36px;
+  }
+}

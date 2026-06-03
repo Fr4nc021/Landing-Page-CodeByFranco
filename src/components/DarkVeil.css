@@ -1,0 +1,60 @@
+.dark-veil {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 85% at 12% 10%, rgba(126, 154, 176, 0.3) 0%, rgba(10, 10, 10, 0) 52%),
+    radial-gradient(95% 78% at 85% 0%, rgba(83, 104, 120, 0.36) 0%, rgba(10, 10, 10, 0) 55%),
+    linear-gradient(160deg, #1a232d 0%, #10151b 42%, #0a0a0a 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark-veil__orb {
+  display: none;
+}
+
+.dark-veil__orb--left {
+  width: 58vw;
+  height: 38vh;
+  left: -8vw;
+  top: -3vh;
+  transform: rotate(-10deg);
+  background: linear-gradient(120deg, #536878, #7a8d9c 60%, #e5e4e2);
+  animation-delay: 0s;
+}
+
+.dark-veil__orb--center {
+  width: 40vw;
+  height: 48vh;
+  left: 35vw;
+  top: -15vh;
+  transform: rotate(20deg);
+  background: linear-gradient(120deg, #536878, #e5e4e2);
+  animation-delay: -4s;
+}
+
+.dark-veil__orb--right {
+  width: 45vw;
+  height: 50vh;
+  right: -10vw;
+  top: -8vh;
+  transform: rotate(-22deg);
+  background: linear-gradient(140deg, #3f4f5c, #536878 60%, #8ea0ae);
+  opacity: 0.65;
+  animation-delay: -9s;
+}
+
+.dark-veil__noise {
+  display: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 3vh, 0) scale(1.07);
+  }
+}
