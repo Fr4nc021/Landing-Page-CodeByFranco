@@ -82,6 +82,8 @@ export default function Trabalhos() {
             </li>
           ))}
         </ul>
+
+        <p className="trabalhos__hint">Clique e conheça meus trabalhos.</p>
       </div>
     </section>
   )

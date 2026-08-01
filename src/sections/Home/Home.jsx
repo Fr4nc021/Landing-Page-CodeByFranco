@@ -21,7 +21,7 @@ export default function Home() {
 
           <div className="hero__actions">
             <a href="#pacotes" className="hero__btn hero__btn--primary">
-              Ver pacotes →
+              Ver soluções →
             </a>
             <a href="#projetos" className="hero__btn hero__btn--secondary">
               Ver projetos

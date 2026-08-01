@@ -44,17 +44,25 @@ const features = [
 ]
 
 const courses = [
-  { title: 'Desenvolvimento Web (HTML, CSS, JavaScript)', date: 'Jun/2024', completed: true },
-  { title: 'Node.js e criação de APIs', date: 'Jul/2025', completed: true },
-  { title: 'Next.js App Router e Testes', date: 'Out/2025', completed: false },
-  { title: 'Arquitetura frontend/backend', date: 'Nov/2025', completed: false },
+  { title: 'Introdução à Programação de Jogos com Unity', date: 'Jul/2026' },
+  { title: 'Desenvolvimento Web (HTML, CSS, JavaScript)', date: 'Jun/2024' },
+  { title: 'Node.js e criação de APIs', date: 'Jul/2025' },
+  { title: 'Next.js App Router e Testes', date: 'Out/2025' },
+  { title: 'Arquitetura frontend/backend', date: 'Nov/2025' },
 ]
 
-const academic = {
-  degree: 'Análise e Desenvolvimento de Sistemas',
-  institution: 'UCS — RS',
-  status: 'Cursando (2023 – 2026 / Conclusão)',
-}
+const academics = [
+  {
+    degree: 'Ciência da Computação',
+    institution: 'UCS — RS',
+    status: 'Cursando — previsão de conclusão em 2029',
+  },
+  {
+    degree: 'Análise e Desenvolvimento de Sistemas',
+    institution: 'UCS — RS',
+    status: 'Formada | Ano de conclusão: 2026',
+  },
+]
 
 export default function Sobre() {
   return (
@@ -92,24 +100,26 @@ export default function Sobre() {
               </span>
               Formação acadêmica
             </h3>
-            <p className="sobre__formation-degree">
-              {academic.degree}
-            </p>
-            <p className="sobre__formation-institution">{academic.institution}</p>
-            <span className="sobre__formation-badge">{academic.status}</span>
+            <ul className="sobre__formation-academics">
+              {academics.map(({ degree, institution, status }) => (
+                <li key={degree} className="sobre__formation-academic">
+                  <p className="sobre__formation-degree">{degree}</p>
+                  <p className="sobre__formation-institution">{institution}</p>
+                  <span className="sobre__formation-badge">{status}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="sobre__formation-block">
             <h3 className="sobre__formation-title">Cursos &amp; certificações</h3>
             <ul className="sobre__formation-list">
-              {courses.map(({ title, date, completed }) => (
+              {courses.map(({ title, date }) => (
                 <li key={title}>
-                  {completed && (
-                    <span className="sobre__formation-check" aria-hidden="true">
-                      ✓
-                    </span>
-                  )}
-                  <span className={completed ? undefined : 'sobre__formation-item-text'}>
+                  <span className="sobre__formation-check" aria-hidden="true">
+                    ✓
+                  </span>
+                  <span>
                     {title}
                     <span className="sobre__formation-date"> ({date})</span>
                   </span>
@@ -122,3 +132,4 @@ export default function Sobre() {
     </section>
   )
 }
+

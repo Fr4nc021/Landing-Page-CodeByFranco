@@ -3,7 +3,7 @@ import './Header.css'
 
 const navLinks = [
   { label: 'Sobre', href: '#sobre' },
-  { label: 'Pacotes', href: '#pacotes' },
+  { label: 'Soluções', href: '#pacotes' },
   { label: 'Projetos', href: '#projetos' },
   { label: 'Contato', href: '#contato' },
 ]

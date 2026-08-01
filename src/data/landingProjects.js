@@ -1,5 +1,14 @@
 export const landingProjects = [
   {
+    id: 'criativo-by-julia',
+    project: 'Criativo By Julia',
+    client: 'Criativo By Julia',
+    objective:
+      'Página para a assessora apresentar seus principais serviços, portfólio e canais de contato, com narrativa criativa e estética alinhada à marca.',
+    codeSpace: 'HTML, CSS, JavaScript, TypeScript',
+    url: 'https://criativobyjulia.vercel.app/',
+  },
+  {
     id: 'homem-da-casa',
     project: 'Homem da Casa',
     client: 'Alexandre Dala Senta',
