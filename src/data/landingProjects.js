@@ -9,6 +9,15 @@ export const landingProjects = [
     url: 'https://criativobyjulia.vercel.app/',
   },
   {
+    id: 'grostoli-da-casa',
+    project: 'Grostoli da Casa',
+    client: 'Grostoli da Casa',
+    objective:
+      'Landing page para venda de grostoli, com informações de contato, valores e localização para facilitar o pedido e a visita dos clientes.',
+    codeSpace: 'HTML, CSS, JavaScript, TypeScript',
+    url: 'https://grostolidacasa.vercel.app/',
+  },
+  {
     id: 'homem-da-casa',
     project: 'Homem da Casa',
     client: 'Alexandre Dala Senta',
